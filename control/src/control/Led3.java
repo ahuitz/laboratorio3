@@ -5,15 +5,20 @@
  */
 package control;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author EST1659109
  */
-public interface Control {
-    public ArrayList listBoton=null;
-    public void setBoton(Boton miBoton);
-    public void Control();
+public class Led3 extends TipoAccion{
+    private boolean estado;
     
+    @Override
+    public boolean On() {
+        return estado=true;        
+    }
+
+    @Override
+    public boolean Off() {
+        return estado=false;
+    }
 }
